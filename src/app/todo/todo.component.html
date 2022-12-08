@@ -1,0 +1,12 @@
+Manage my Todos with NgRx <br />
+<ol>
+  <li *ngFor="let task of tasks$ | async" (click)="onMarkDone(task)" [ngClass]="{ 'done': task.done }">
+    {{ task.description }}
+  </li>
+</ol>
+<hr />
+<p>
+  <input type="text" placeholder="New Task Description" [(ngModel)]="task" />
+  <button (click)="onAdd()">Add Task</button>
+  <button (click)="onReset()">Reset</button>
+</p>
