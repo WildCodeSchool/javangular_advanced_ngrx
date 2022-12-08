@@ -1,4 +1,4 @@
-Manage my Todos with NgRx <br />
+<h2>Manage my Todos with NgRx</h2>
 <ol>
   <li *ngFor="let task of tasks$ | async" (click)="onMarkDone(task)" [ngClass]="{ 'done': task.done }">
     {{ task.description }}
